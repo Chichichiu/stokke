@@ -1,3 +1,25 @@
+@media #{$col-mb} {
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-3160px);
+        }
+    }
+}
+
+@media #{$col-pad} {
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-5560px);
+        }
+    }
+}
+
 @keyframes move-up {
     0% {
         @include alpha(0);
