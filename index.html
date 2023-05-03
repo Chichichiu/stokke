@@ -23,15 +23,16 @@
     <div class="video">
         <div class="start-show">
             <div class="en">Welcome Home</div>
-            <h2>我們為你打造了㇐個家</h2>
+            <h2>我們為你打造了一個家</h2>
         </div>
+        <div class="bg"></div>
         <video src="assets/images/video.mp4" controls autoplay muted loop></video>
     </div>
     <div class="main about" id="rd-section-1">
         <div class="logo"></div>
         <div class="view">
             <div class="tit-style">
-                <div class="en">Stokke® Nursery Room</div>
+                <div class="en"><span>Stokke®</span> <span>Nursery Room</span></div>
                 <h2>打造完美嬰兒房</h2>
                 <div class="line"></div>
             </div>
@@ -331,14 +332,14 @@
                 </div>
             </div>
         </div>
-        <div class="product-box" id="rd-section-6">
+        <div class="product-box">
             <div class="bg">
                 <div class="view">
                     <div class="t-part"></div>
                     <div class="b-part"></div>
                 </div>
             </div>
-            <div class="box">
+            <div class="box" id="rd-section-6">
                 <div class="txt">
                     <p>想為家中新成員打造兼具功能性、安全性以及美感的嬰兒房嗎?</p>
                     <p>讓 Stokke 為你實現心中理想，陪伴孩子一起幸福成長!</p>
@@ -353,9 +354,9 @@
             </div>
             <div class="pro-list">
                 <div class="bg"></div>
-                <div class="showbox swiper mySwiper">
+                <div class="showbox swiper-container mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="item swiper-slide">
+                        <div class="item type1 swiper-slide">
                             <div class="view">
                                 <a href="" class="pic"><span></span></a>
                                 <a href="" class="link">
@@ -364,7 +365,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="item swiper-slide">
+                        <div class="item type2 swiper-slide">
                             <div class="view">
                                 <a href="" class="pic"><span></span></a>
                                 <a href="" class="link">
@@ -373,7 +374,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="item swiper-slide">
+                        <div class="item type3 swiper-slide">
                             <div class="view">
                                 <a href="" class="pic"><span></span></a>
                                 <a href="" class="link">
@@ -382,7 +383,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="item swiper-slide">
+                        <div class="item type4 swiper-slide">
                             <div class="view">
                                 <a href="" class="pic"><span></span></a>
                                 <a href="" class="link">
@@ -391,7 +392,52 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="item swiper-slide">
+                        <div class="item type5 swiper-slide">
+                            <div class="view">
+                                <a href="" class="pic"><span></span></a>
+                                <a href="" class="link">
+                                    <span class="en">Flexi Bath</span>
+                                    <span>摺疊式浴盆</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item type1 swiper-slide">
+                            <div class="view">
+                                <a href="" class="pic"><span></span></a>
+                                <a href="" class="link">
+                                    <span class="en">Sleepi Mini</span>
+                                    <span>迷你嬰兒床</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item type2 swiper-slide">
+                            <div class="view">
+                                <a href="" class="pic"><span></span></a>
+                                <a href="" class="link">
+                                    <span class="en">Sleepi Bed</span>
+                                    <span>嬰兒床</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item type3 swiper-slide">
+                            <div class="view">
+                                <a href="" class="pic"><span></span></a>
+                                <a href="" class="link">
+                                    <span class="en">Changer+<br/>Dresser</span>
+                                    <span>尿布台組合</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item type4 swiper-slide">
+                            <div class="view">
+                                <a href="" class="pic"><span></span></a>
+                                <a href="" class="link">
+                                    <span class="en">Changing Table</span>
+                                    <span>護理台</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item type5 swiper-slide">
                             <div class="view">
                                 <a href="" class="pic"><span></span></a>
                                 <a href="" class="link">
@@ -504,22 +550,21 @@
 <script>
     $(function(){
 
-        $('.pro-dot').click(function(e){
-            //1. 知道自己點了第幾個tab, 將index存進變數
-            var index = $(this).index();
-            var winWide = window.screen.width;
+        var winWide = window.screen.width;
 
+        if(winWide <= 991) {
 
-            if(winWide <= 991) {
+            $('.pro-dot').click(function(e){
+                //1. 知道自己點了第幾個tab, 將index存進變數
+                var index = $(this).index();
+
                 $('.mb .pro-pop-txt').not(this).removeClass('mb-style');
                 $('.mb .pro-pop-txt').eq(index).addClass('mb-style');
-            }
-            else {
-                $('.pro-dot').not(this).removeClass('now');
-                $('.pro-dot').eq(index).toggleClass('now');
-            }
 
-        });
+            });
+
+        }
+
 
         $('.close').click(function (e){
             $(this).parents('.pro-pop-txt').removeClass('mb-style');
@@ -528,8 +573,10 @@
 
 
         var swiper = new Swiper(".mySwiper", {
-            slidesPerView: "auto",
+            slidesPerView: 3,
             spaceBetween: 10,
+            slidesPerGroup: 1,
+            loop: true,
             navigation: {
                 nextEl: '.btn-right',
                 prevEl: '.btn-left',
@@ -538,7 +585,9 @@
                 // when window width is >= 768px
                 768: {
                     slidesPerView: "loop",
-                    spaceBetween: "loop"
+                    spaceBetween: "loop",
+                    slidesPerGroup: "loop",
+                    loop: "loop",
                 }
             }
         });
