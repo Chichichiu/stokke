@@ -169,12 +169,20 @@
     .viewshow {
       position: relative;
       padding-top: 70.3125%;
-      background: url("#{$img_path}baby_room_mb.jpg") 50% 50% no-repeat;
+      background: url("#{$img_path}baby_room_mb.jpg") 50% 0 no-repeat;
       background-size: cover;
 
       img {
         display: none;
       }
+    }
+  }
+
+  @media #{$col-mb} {
+    .viewshow {
+      padding-top: 100%;
+      background: url("#{$img_path}baby_room_mb1.jpg") 50% 0 no-repeat;
+      background-size: cover;
     }
   }
 
@@ -264,32 +272,34 @@
   }
   
   @media #{$col-mb} {
-    height: 40%;
-
     &.pro-1 {
       margin-left: -35%;
-      margin-top: -27%;
-      height: 50%;
+      margin-top: -19%;
+      height: 27%;
     }
 
     &.pro-2 {
       margin-left: -16%;
-      margin-top: -21%;
+      margin-top: -36%;
+      height: 45%;
     }
 
     &.pro-3 {
       margin-left: 5%;
-      margin-top: -24%;
+      margin-top: -18%;
+      height: 24%;
     }
 
     &.pro-4 {
       margin-left: 24%;
-      margin-top: -21.5%;
+      margin-top: -36%;
+      height: 45%;
     }
 
     &.pro-5 {
-      margin-left: 40%;
-      margin-top: -16.5%;
+      margin-left: 36%;
+      margin-top: -8%;
+      height: 24%;
     }
   }
 
@@ -365,7 +375,7 @@
     width: 85px;
 
     .box {
-      width: 90px;
+      width: 120px;
       flex: 0 0 60px;
       border-radius: 5px;
       padding-right: 5px;
@@ -376,13 +386,9 @@
       font-size: 12px;
       line-height: 16px;
 
-      .en {
-        transform: scale(0.8);
-        transform-origin: 0 0;
-      }
-
       p {
-        margin-top: -5px;
+        font-size: 14px;
+        line-height: 18px;
       }
     }
 
@@ -392,22 +398,6 @@
       background: url("#{$img-path}arrow_mb.png") 50% 50% no-repeat;
       background-size: contain;
       margin-left: 10px;
-    }
-  }
-
-  @media #{$col-mb} {
-    .box {
-      width: 85px;
-      flex: 0 0 40px;
-      border-radius: 5px;
-      padding-right: 5px;
-      padding-left: 5px;
-    }
-
-    .arrow {
-      width: 4px;
-      height: 6px;
-      margin-left: 5px;
     }
   }
 
@@ -480,6 +470,38 @@
 
     &.pro-5 {
       margin: 15% 0 0 32%;
+    }
+
+    .dot {
+      width: 16px;
+      height: 16px;
+
+      &::after {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+
+  @media #{$col-mb} {
+    &.pro-1 {
+      margin: 15% 0 0 -40%;;
+    }
+
+    &.pro-2 {
+      margin: 14% 0 0 -18%;
+    }
+
+    &.pro-3 {
+      margin: 12% 0 0 3%;
+    }
+
+    &.pro-4 {
+      margin: 18% 0 0 18%;
+    }
+
+    &.pro-5 {
+      margin: 24% 0 0 32%;
     }
 
     .dot {
@@ -875,6 +897,12 @@
 
     .txt-part {
       margin-bottom: 30px;
+    }
+
+    .pic-part {
+      p {
+        display: none;
+      }
     }
   }
 
