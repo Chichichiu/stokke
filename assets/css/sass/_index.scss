@@ -1576,6 +1576,10 @@
         }
       }
 
+      &:nth-child(n+6) {
+        display: none;
+      }
+
       &:hover {
         .pic {
           transform: scale(1.1);
