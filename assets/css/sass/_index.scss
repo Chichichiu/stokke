@@ -403,11 +403,11 @@
     }
 
     .flex-show {
-      font-size: 1vw;
+      font-size: 3vw;
       line-height: initial;
 
       p {
-        font-size: 1vw;
+        font-size: 3vw;
         line-height: initial;
       }
     }
@@ -417,7 +417,29 @@
       height: 12px;
       background: url("#{$img-path}arrow_mb.png") 50% 50% no-repeat;
       background-size: contain;
-      margin-left: 10px;
+      margin-left: 5px;
+    }
+  }
+
+  @media only screen and (min-width: 420px) {
+    width: 150px;
+
+    .box {
+      width: 110px;
+      flex: 0 0 70px;
+      border-radius: 15px;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+
+    .flex-show {
+      font-size: 12px;
+      line-height: 16px;
+
+      p {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
   }
 
@@ -1490,8 +1512,7 @@
     padding-bottom: 60px;
 
     .item {
-      flex: 0 0 120px;
-      width: 120px;
+      flex: 0 0 auto;
       margin-right: 10px;
 
       &:last-child {
