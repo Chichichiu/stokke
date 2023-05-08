@@ -3,16 +3,6 @@
   padding-top: 56.25%;
   position: relative;
 
-  .home-mp4 {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-  }
-
   .hero-video,
   .hero iframe {
     position: absolute;
@@ -27,7 +17,7 @@
   .hero-video,
   .hero iframe {
     @include alpha(0);
-    animation: alpha-1 1s 2.5s forwards ease-in-out;
+    animation: alpha-1 1s 4s forwards ease-in-out;
   }
 
   .bg {
