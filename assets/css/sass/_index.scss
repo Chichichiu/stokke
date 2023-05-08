@@ -110,11 +110,11 @@
   @media #{$col-pads} {
     &.do {
       .logo {
-        animation: alpha-1 1s 4.3s forwards ease-in-out;
+        animation: alpha-1 1s 5.5s forwards ease-in-out;
       }
 
       .view {
-        animation: move-up 1s 4.3s forwards ease-in-out;
+        animation: move-up 1s 5.5s forwards ease-in-out;
       }
     }
   }
