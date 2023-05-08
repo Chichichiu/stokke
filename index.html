@@ -643,6 +643,15 @@
             }
         });
 
+        ScrollTrigger.create({
+            trigger: '#rd-section-6',
+            start: "top top+=50%",
+            markers:false,
+            onEnter: function () {
+                $('#rd-section-6').addClass('do')
+            }
+        });
+
         var youtubeEmbedElement = document.getElementById("youtubeEmbed");
 
 // Add YouTube API script
